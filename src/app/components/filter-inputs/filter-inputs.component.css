@@ -6,6 +6,7 @@
     margin-right: 10vw;
 }
 .container{
-    margin-right: 10vw;
+    margin-left: 10vw;
+    direction :rtl;
 }
 
