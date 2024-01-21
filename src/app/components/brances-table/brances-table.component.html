@@ -1,0 +1,30 @@
+<table *ngIf="filteredArrForTable.length>0" mat-table [dataSource]="filteredArrForTable" class="mat-elevation-z8" id="branches-table">
+
+    <ng-container matColumnDef="Id">
+      <th mat-header-cell *matHeaderCellDef>קוד</th>
+      <td mat-cell *matCellDef="let element"> {{element.store_id}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef> שם  </th>
+      <td mat-cell *matCellDef="let element"> {{element.store_title}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Address">
+      <th mat-header-cell *matHeaderCellDef> כתובת  </th>
+      <td mat-cell *matCellDef="let element"> {{element.store_address}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="City">
+      <th mat-header-cell *matHeaderCellDef> עיר </th>
+      <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Area">
+        <th mat-header-cell *matHeaderCellDef> אזור </th>
+        <td mat-cell *matCellDef="let element"> {{element.store_region}} </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="titleColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: titleColumns;"></tr>
+  </table>

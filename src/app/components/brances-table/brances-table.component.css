@@ -1,0 +1,6 @@
+#branches-table{
+    direction:rtl;
+}
+th,tr,td{
+    text-align: center;
+}

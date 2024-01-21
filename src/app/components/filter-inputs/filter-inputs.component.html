@@ -1,0 +1,31 @@
+<div class="flex-container">
+
+    <mat-form-field appearance="fill" class="container" name="area">
+        <mat-label>בחר איזור</mat-label>
+        <mat-select [(ngModel)]="selectedArea" (ngModelChange)="filterByArea($event)">
+            <mat-option *ngFor="let branch of arrBranches" [value]="branch.store_region">
+                {{branch.store_region}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div></div>
+
+    <mat-form-field appearance="fill" class="container" name="city">
+        <mat-label>בחר עיר</mat-label>
+        <mat-select [(ngModel)]="selectedCity" (ngModelChange)="filterByCity($event)">
+            <mat-option *ngFor="let branch of arrBranches" [value]="branch.city">
+                {{branch.city}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div></div>
+
+    <mat-form-field class="example-full-width" name="freeText">
+        <mat-label>חיפוש חופשי</mat-label>
+        <textarea [(ngModel)]="freeSearchText" (ngModelChange)="filterByFreeSearchText($event)" matInput
+            placeholder="חיפוש חופשי"></textarea>
+    </mat-form-field>
+</div>
+<app-brances-table [filteredArrForTable]="filteredArr"></app-brances-table>

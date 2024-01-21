@@ -1,0 +1,15 @@
+#mcdonalds-logo{
+    width:10vw;
+    height: 10vh;
+}
+#title{
+    color:green;
+    font-family: 'calibiri';
+}
+.flex-container{
+    display:flex;
+    flex-wrap:wrap;
+    margin-right: 33%;
+    margin-left:33%;
+    margin-top: 5%;
+}
