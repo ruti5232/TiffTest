@@ -1,5 +1,6 @@
 #branches-table{
     direction:rtl;
+    width:80vw;
 }
 th,tr,td{
     text-align: center;

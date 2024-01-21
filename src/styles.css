@@ -5,3 +5,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 mat-label{
     text-align: center!important;
 }
+.mat-mdc-select {
+    text-align: center!important;
+}
+.inputs{
+    height: 4.5vh!important;
+}
